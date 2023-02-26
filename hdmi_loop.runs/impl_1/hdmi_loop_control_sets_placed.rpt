@@ -1,0 +1,108 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Sun Feb 26 20:46:44 2023
+| Host         : LAPTOP-43GH0CTS running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file hdmi_loop_control_sets_placed.rpt
+| Design       : hdmi_loop
+| Device       : xc7a35t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    30 |
+|    Minimum number of control sets                        |    30 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    84 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    30 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     8 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     7 |
+| >= 10 to < 12      |     4 |
+| >= 12 to < 14      |     3 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     7 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             252 |           73 |
+| No           | No                    | Yes                    |              45 |           21 |
+| No           | Yes                   | No                     |             113 |           31 |
+| Yes          | No                    | No                     |              15 |            6 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             163 |           43 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------------------+----------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|                  Clock Signal                  |                                   Enable Signal                                  |                                             Set/Reset Signal                                            | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------------------------------+----------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  u_mmcm/inst/clk_out1                          |                                                                                  |                                                                                                         |                4 |              5 |         1.25 |
+|  u_mmcm/inst/clk_out1                          | u_i2c_edid/count                                                                 | u_i2c_edid/count[4]_i_1_n_0                                                                             |                2 |              5 |         2.50 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_2/u_phasealign/pcenter_tap[5]_i_1__1_n_0  |                                                                                                         |                2 |              5 |         2.50 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_2/u_phasealign/peyeopen_en                | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_2/u_phasealign/peyeopen_rst                                      |                1 |              5 |         5.00 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_1/u_phasealign/pcenter_tap[5]_i_1__0_n_0  |                                                                                                         |                2 |              5 |         2.50 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_1/u_phasealign/peyeopen_en                | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_1/u_phasealign/peyeopen_rst                                      |                2 |              5 |         2.50 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_0/u_phasealign/pcenter_tap[5]_i_1_n_0     |                                                                                                         |                2 |              5 |         2.50 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_0/u_phasealign/peyeopen_en                | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_0/u_phasealign/peyeopen_rst                                      |                2 |              5 |         2.50 |
+|  u_mmcm/inst/clk_out1                          | u_i2c_edid/rdata                                                                 | u_i2c_edid/SR[0]                                                                                        |                1 |              7 |         7.00 |
+|  u_mmcm/inst/clk_out1                          | u_i2c_edid/data                                                                  | u_i2c_edid/SR[0]                                                                                        |                2 |              8 |         4.00 |
+|  u_mmcm/inst/clk_out1                          | u_i2c_edid/addr                                                                  | u_i2c_edid/SR[0]                                                                                        |                3 |              8 |         2.67 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_0/u_channelbond/E[0]                      | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_0/u_decoder//i__n_0                                              |                1 |              8 |         8.00 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_1/u_channelbond/pvde                      | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_1/u_channelbond/iamrdy_reg_1[0]                                  |                2 |              8 |         4.00 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_2/u_channelbond/E[0]                      | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_2/u_channelbond/iamrdy_reg_0[0]                                  |                3 |              8 |         2.67 |
+|  u_mmcm/inst/clk_out2                          |                                                                                  | u_hdmi_rx/u_dvi_decoder/reset_reg_0                                                                     |                3 |              9 |         3.00 |
+|  u_mmcm/inst/clk_out1                          |                                                                                  | u_i2c_edid/SR[0]                                                                                        |                4 |              9 |         2.25 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk |                                                                                  | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_2/u_phasealign/pctltkn_rst                                       |                3 |             10 |         3.33 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk |                                                                                  | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_1/u_phasealign/pctltkn_rst                                       |                2 |             10 |         5.00 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk |                                                                                  | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_0/u_phasealign/pctltkn_rst                                       |                2 |             10 |         5.00 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk |                                                                                  | u_hdmi_rx/u_dvi_decoder/reset_reg_0                                                                     |                4 |             11 |         2.75 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk |                                                                                  | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_2/u_phasealign/palign_rst                                        |                4 |             13 |         3.25 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk |                                                                                  | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_1/u_phasealign/palign_rst                                        |                3 |             13 |         4.33 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk |                                                                                  | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_0/u_phasealign/palign_rst                                        |                3 |             13 |         4.33 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk |                                                                                  | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_1/u_phasealign/paligned_reg_1                                    |                5 |             18 |         3.60 |
+|  u_mmcm/inst/clk_out2                          | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_2/u_phasealign/rtimeout_cnt[0]_i_1__1_n_0 | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_2/u_phasealign/u_syncbaserst/u_syncasync/osyncstages_reg[1]_0[0] |                8 |             32 |         4.00 |
+|  u_mmcm/inst/clk_out2                          | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_1/u_phasealign/rtimeout_cnt[0]_i_1__0_n_0 | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_1/u_phasealign/u_syncbaserst/u_syncasync/osyncstages_reg[1]_0[0] |                8 |             32 |         4.00 |
+|  u_mmcm/inst/clk_out2                          | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_0/u_phasealign/sel                        | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_0/u_phasealign/u_syncbaserst/u_syncasync/osyncstages_reg[1]_0[0] |                8 |             32 |         4.00 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk |                                                                                  | u_rgb2dvi_0/reset_syn/AR[0]                                                                             |               19 |             42 |         2.21 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk | u_hdmi_rx/u_dvi_decoder/u_tmds_decoder_1/u_channelbond/WRITE_EN                  |                                                                                                         |                9 |             60 |         6.67 |
+|  u_hdmi_rx/u_dvi_decoder/u_tmds_clock/pixelclk |                                                                                  |                                                                                                         |               69 |            248 |         3.59 |
++------------------------------------------------+----------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+

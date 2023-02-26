@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Feb 27 00:15:32 2023
+# Process ID: 57008
+# Current directory: D:/slim/WHUT/JiChuang/XiaoSai/hdmi_loop
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent43240 D:\slim\WHUT\JiChuang\XiaoSai\hdmi_loop\hdmi_loop.xpr
+# Log file: D:/slim/WHUT/JiChuang/XiaoSai/hdmi_loop/vivado.log
+# Journal file: D:/slim/WHUT/JiChuang/XiaoSai/hdmi_loop\vivado.jou
+# Running On: LAPTOP-43GH0CTS, OS: Windows, CPU Frequency: 2894 MHz, CPU Physical cores: 16, Host memory: 16505 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/slim/WHUT/JiChuang/XiaoSai/hdmi_loop/hdmi_loop.xpr
+open_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/slim/WHUT/JiChuang/XiaoSai/hdmi_loop/hdmi_loop.runs/impl_1/hdmi_loop.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+create_hw_cfgmem -hw_device [get_hw_devices xc7a35t_0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/slim/WHUT/JiChuang/XiaoSai/hdmi_loop/hdmi_loop.runs/impl_1/hdmi_loop.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw_manager

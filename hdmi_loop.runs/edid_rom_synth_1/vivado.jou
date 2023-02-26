@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Fri Feb 24 16:42:48 2023
+# Process ID: 5944
+# Current directory: D:/slim/WHUT/JiChuang/XiaoSai/hdmi_loop/hdmi_loop.runs/edid_rom_synth_1
+# Command line: vivado.exe -log edid_rom.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source edid_rom.tcl
+# Log file: D:/slim/WHUT/JiChuang/XiaoSai/hdmi_loop/hdmi_loop.runs/edid_rom_synth_1/edid_rom.vds
+# Journal file: D:/slim/WHUT/JiChuang/XiaoSai/hdmi_loop/hdmi_loop.runs/edid_rom_synth_1\vivado.jou
+# Running On: LAPTOP-43GH0CTS, OS: Windows, CPU Frequency: 2894 MHz, CPU Physical cores: 16, Host memory: 16505 MB
+#-----------------------------------------------------------
+source edid_rom.tcl -notrace
